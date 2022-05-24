@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BrandController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -15,4 +16,15 @@ Route::group(['prefix'  =>  'admin'], function () {
             return view('admin.dashboard.index');
         })->name('admin.dashboard');
     });
+
+    Route::resource('brands', BrandController::class , [
+        'names' => [
+            'index' => 'admin.brands.index',
+            'create' => 'admin.brands.create',
+            'store' => 'admin.brands.store',
+            'edit' => 'admin.brands.edit',
+            'update' => 'admin.brands.update',
+            'destroy' => 'admin.brands.destroy',
+        ]
+    ])->except('show');
 });
