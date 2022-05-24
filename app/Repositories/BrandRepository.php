@@ -17,7 +17,7 @@ use Doctrine\Instantiator\Exception\InvalidArgumentException;
  */
 class BrandRepository extends BaseRepository implements BrandContract
 {
-    //use UploadAble;
+    use UploadAble;
 
     /**
      * CategoryRepository constructor.
