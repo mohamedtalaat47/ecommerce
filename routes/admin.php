@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\BrandController;
+use App\Http\Controllers\Admin\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -25,6 +26,17 @@ Route::group(['prefix'  =>  'admin'], function () {
             'edit' => 'admin.brands.edit',
             'update' => 'admin.brands.update',
             'destroy' => 'admin.brands.destroy',
+        ]
+    ])->except('show');
+
+    Route::resource('categories', CategoryController::class , [
+        'names' => [
+            'index' => 'admin.categories.index',
+            'create' => 'admin.categories.create',
+            'store' => 'admin.categories.store',
+            'edit' => 'admin.categories.edit',
+            'update' => 'admin.categories.update',
+            'destroy' => 'admin.categories.destroy',
         ]
     ])->except('show');
 });

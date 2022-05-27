@@ -90,7 +90,6 @@ class BrandController extends Controller
     {
         $brand = $this->brandRepository->findBrandById($id);
 
-        //$this->setPageTitle('Brands', 'Edit Brand : ' . $brand->name);
         $pageTitle = "Brands";
         $subTitle = "Edit Brand : " . $brand->name;
         return view('admin.brands.edit', compact('brand','pageTitle','subTitle'));

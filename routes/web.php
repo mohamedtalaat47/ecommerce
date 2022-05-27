@@ -19,3 +19,4 @@ require 'admin.php';
 
 Route::view('/', 'site.pages.homepage');
 
+Route::get('/category/{slug}', 'App\Http\Controllers\Site\CategoryController@show')->name('category.show');

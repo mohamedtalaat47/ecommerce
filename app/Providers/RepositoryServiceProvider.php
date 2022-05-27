@@ -5,6 +5,14 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Contracts\BrandContract;
 use App\Repositories\BrandRepository;
+use App\Contracts\CategoryContract;
+use App\Repositories\CategoryRepository;
+use App\Contracts\AttributeContract;
+use App\Repositories\AttributeRepository;
+use App\Contracts\ProductContract;
+use App\Repositories\ProductRepository;
+use App\Contracts\OrderContract;
+use App\Repositories\OrderRepository;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
